@@ -1,8 +1,19 @@
-// Change elements in an array to a certain value until a stop value is reached
+// change every element in an array to a certain value until a stop value is reached
 function breakOut(array, changeValue, stopValue) {
   for (let i = 0; i < array.length; i++) {
     if (array[i] === stopValue) {
-      break;
+      break
+    }
+    array[i] = changeValue;
+  }
+  return array;
+}
+
+// change every element in an array to a certain value unless the element === a skip value
+function keepGoing(array, changeValue, skipValue) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === skipValue) {
+      continue
     }
     array[i] = changeValue;
   }
