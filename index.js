@@ -19,3 +19,13 @@ function keepGoing(array, changeValue, skipValue) {
   }
   return array;
 }
+
+// finds the first element that satisfies the given function
+function findBy(array, findFn) {
+  for (let i = 0; i < array.length; i++) {
+    if(findFn(array[i])) {
+      return array[i];
+    }
+    return null;
+  }
+}
